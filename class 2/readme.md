@@ -8,6 +8,10 @@ We'll be looking at combining Quartz Composer with other applications and hardwa
 
 On the technical side, we'll review and then dig deeper into macro patches.
 
+## OSC
+
+[FaceOSC](https://github.com/downloads/kylemcdonald/ofxFaceTracker/FaceOSC.zip), 8338
+
 ## Plug-Ins
 
 Quartz Composer supports custom-made patches and there's a community of independent developers adding exciting functionality to QC.
