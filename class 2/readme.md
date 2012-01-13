@@ -4,6 +4,7 @@
 
 * `Trackball`
 * `Replicate in Space`
+* `3D Transformation`
 * `Iterator`
 * Working with **Structure**s
 * `Queue`
