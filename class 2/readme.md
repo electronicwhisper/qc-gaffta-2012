@@ -5,7 +5,7 @@
 * `Trackball`
 * `Replicate in Space`
 * `Iterator`
-* Working with **Structures**
+* Working with **Structure**s
 * `Queue`
 
 ## Part 2: Extending Quartz Composer
