@@ -23,7 +23,7 @@ The following are direct download links to .zip's and .dmg's. Current as of 12 J
 
 * [qcOSC Plug-In](http://hexler.net/pub/qcosc/qcOSC-v0.6.zip) by hexler. A more reliable OSC receiver than the one that comes with Quartz Composer.
 
-* [FaceOSC](https://github.com/downloads/kylemcdonald/ofxFaceTracker/FaceOSC.zip), by Kyle Mcdonald. Tracks facial features and outputs as OSC messages on port 8338. (QC for Lion has a new `Facial Recognition` patch, but I haven't played with it yet.)
+* [FaceOSC](https://github.com/downloads/kylemcdonald/ofxFaceTracker/FaceOSC.zip), by Kyle Mcdonald. Tracks facial features and outputs as OSC messages on port 8338. (QC for Lion has the `Detector` patch which can track faces but not *facial features*.)
 
 * Syphon by vade, Tom Butterworth, et al. You'll need [Syphon Quartz Composer Plug-In](http://syphon-implementations.googlecode.com/files/Syphon%20For%20Quartz%20Composer%20Public%20Beta%202.dmg), [Syphon Simple Server/Client](http://syphon-implementations.googlecode.com/files/Syphon%20Demo%20Apps%20Public%20Beta%202.dmg) (for testing), [Syphon Recorder](http://bit.ly/h1cLS5) (useful for recording Syphon image streams to disk)
 
