@@ -1,14 +1,14 @@
 # Class 2
 
-## Macro Patches, going deeper
+## Part 1: Macro Patches, going deeper
 
 * `Trackball`
 * `Replicate in Space`
 * `Iterator`
-* Working with structures
+* Working with **Structures**
 * `Queue`
 
-## Extending Quartz Composer
+## Part 2: Extending Quartz Composer
 
 * Plug-Ins
 * OSC
