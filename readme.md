@@ -12,6 +12,12 @@ We'll also share cool projects that workshop participants create.
 * Class 3
 * Class 4
 
+## Class Wiki
+
+* [[Quartz Composer Plug-Ins]]
+* [[Other Fun Stuff]] - Not plug-ins per se, but other applications you can combine with QC
+* [[Quartz Composer Resources]]
+
 ## Class Description
 
 Quartz Composer is a visual programming environment (like Max/MSP, PD, VVVV, etc.) which comes with Mac OS X. It is designed for creating real-time, interactive video and graphics. It is particularly useful for quickly prototyping and experimenting with interactive video art installations and performances.
