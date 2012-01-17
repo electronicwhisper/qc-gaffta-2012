@@ -26,8 +26,6 @@ The following are direct download links to .zip's and .dmg's. Current as of 12 J
 
 * [FaceOSC](https://github.com/downloads/kylemcdonald/ofxFaceTracker/FaceOSC.zip), by Kyle Mcdonald. Tracks facial features and outputs as OSC messages on port 8338. (QC for Lion has the `Detector` patch which can track faces but not *facial features*.)
 
-* Syphon by vade, Tom Butterworth, et al. You'll need [Syphon Quartz Composer Plug-In](http://syphon-implementations.googlecode.com/files/Syphon%20For%20Quartz%20Composer%20Public%20Beta%202.dmg), [Syphon Simple Server/Client](http://syphon-implementations.googlecode.com/files/Syphon%20Demo%20Apps%20Public%20Beta%202.dmg) (for testing), [Syphon Recorder](http://bit.ly/h1cLS5) (useful for recording Syphon image streams to disk)
-
 * [triplex toolkit](http://tryplex.googlecode.com/files/tryplex%20toolkit%20v0.222.zip) by Sebastian Kox. Packages together everything you need to do Kinect skeleton tracking. Follow [these installation instructions](http://code.google.com/p/tryplex/wiki/Installation#Running_tryplex_with_Synapse).
 
 For more things to play with, see (and add to!) [Quartz Composer Plug-Ins](https://github.com/electronicwhisper/qc-gaffta-2012/wiki/Quartz-Composer-Plug-Ins) and [Other Fun Stuff](https://github.com/electronicwhisper/qc-gaffta-2012/wiki/Other-Fun-Stuff) on the wiki.
