@@ -1,4 +1,4 @@
-# `JavaScript`
+# JavaScript
 
 ## basic math.qtz
 
