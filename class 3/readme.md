@@ -11,6 +11,8 @@
 
 ## `Accumulator`
 
+![Accumulator Pattern](https://github.com/electronicwhisper/qc-gaffta-2012/raw/master/class%203/accumulator%20pattern.png)
+
 * Feedback effects
 * Drawing
 
