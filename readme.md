@@ -14,6 +14,7 @@ We'll also share cool projects that workshop participants create.
 
 ## Class Wiki
 
+* [FAQ](https://github.com/electronicwhisper/qc-gaffta-2012/wiki/FAQ)
 * [Quartz Composer Plug-Ins](https://github.com/electronicwhisper/qc-gaffta-2012/wiki/Quartz-Composer-Plug-Ins)
 * [Other Fun Stuff](https://github.com/electronicwhisper/qc-gaffta-2012/wiki/Other-Fun-Stuff) - Not plug-ins per se, but other applications you can combine with QC
 * [Quartz Composer Resources](https://github.com/electronicwhisper/qc-gaffta-2012/wiki/Quartz-Composer-Resources)
