@@ -10,7 +10,7 @@ We'll also share cool projects that workshop participants create.
 * [Class 1](https://github.com/electronicwhisper/qc-gaffta-2012/tree/master/class%201)
 * [Class 2](https://github.com/electronicwhisper/qc-gaffta-2012/tree/master/class%202)
 * [Class 3](https://github.com/electronicwhisper/qc-gaffta-2012/tree/master/class%203)
-* Class 4
+* [Class 4](https://github.com/electronicwhisper/qc-gaffta-2012/tree/master/class%204)
 
 ## Class Wiki
 
