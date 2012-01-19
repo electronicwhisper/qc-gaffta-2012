@@ -2,11 +2,11 @@
 
 ## Graphics Processing Unit (GPU)
 
-Traditional processors (CPUs) are single-threaded. This means that although they may execute instructions very quickly, they can only do one thing at a time. Modern computers are *multi-core* which means they have 2 or maybe 4 CPUs, but still you can only now do 2 or 4 things at a time.
+Traditional processors (CPUs) are single-threaded. This means that they can only do one thing at a time. Modern computers are *multi-core* which means they have 2 or maybe 4 CPUs, but still you can only now do 2 or 4 things at a time.
 
-Contrast this with a GPU which consists of thousands of "slimmed down" processors, each operating independently. So a CPU is designed to a single complicated operation very fast, whereas a GPU is designed to a lots of simple operations in parallel.
+Contrast this with a GPU which consists of thousands of "slimmed down" processors, each operating independently. So a CPU is designed to a single, complicated computation as fast as possible, whereas a GPU is designed to a lots of simple computations in parallel.
 
-So the GPU is very useful for computing real-time graphics (their original target application). It's also useful for other highly parallelizeable computation tasks such as physics simulations, audio processing, and bitcoin mining (see [GPGPU](http://en.wikipedia.org/wiki/GPGPU)).
+The GPU is very useful for computing real-time graphics (hence the name). It's also useful for other highly parallelizeable computation tasks such as physics simulations, audio processing, and bitcoin mining (see [General Purpose GPU](http://en.wikipedia.org/wiki/GPGPU)).
 
 For this class, we'll be using the GPU to do 2D image processing, where each pixel is computed independently. You can think of this as *each pixel is its own computer, whose sole purpose is to figure out what color to be*.
 
