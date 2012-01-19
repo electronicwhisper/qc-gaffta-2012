@@ -54,6 +54,14 @@ Note that `destCoord()` is the only thing that varies with respect to each indep
             float c = 2.0;
             a + c; // will make vec2(3.0, 5.0)
             a * c; // will make vec2(2.0, 6.0)
+    
+    * You can [swizzle](http://en.wikipedia.org/wiki/Swizzling_(computer_graphics)) the components of a vector. Examples:
+    
+            vec4 color = vec4(0.9, 0.6, 0.2, 1.0);
+            
+            color.grba // will make vec4(0.6, 0.9, 0.2, 1.0)
+            color.rg; // will make vec2(0.9, 0.6)
+            color.rrra // will make vec4(0.9, 0.9, 0.9, 1.0)
 
 * **sampler**
     * An image.
@@ -62,7 +70,12 @@ Note that `destCoord()` is the only thing that varies with respect to each indep
             vec2 position = vec2(100.0, 200.0);
             vec4 color = sample(image, position); // will grab the color of image at pixel position 100, 200
     
-
+    * You can get the size of an image using `samplerSize(image)` which returns a **vec2** with width and height. Example:
+    
+            vec2 size = samplerSize(image);
+            float width = size.x;
+            float height = size.y;
+    
 ### Loops and Conditionals
 
 Core Image has an interesting restriction. `for` loops and `if then else` conditionals must be pre-determined at compile time. This means that `if then else` conditionals are basically useless and `for` loops must only run a constant number of times.
@@ -73,3 +86,5 @@ To create a conditional, use the *ternary operator*:
 
     // returns twice x if x is greater than 3, otherwise returns 0.
     x > 3.0 ? x * 2.0 : 0.0;
+
+Often you can cleverly use math functions (like `min`, `max`, and `abs`) to get around needing ternary operators.
