@@ -2,36 +2,49 @@
 
 ## Graphics Processing Unit (GPU)
 
+Traditional processors (CPUs) are single-threaded. This means that although they may execute instructions very quickly, they can only do one thing at a time. Modern computers are *multi-core* which means they have 2 or maybe 4 CPUs, but still you can only now do 2 or 4 things at a time.
 
+Contrast this with a GPU which consists of thousands of "slimmed down" processors, each operating independently. So a CPU is designed to a single complicated operation very fast, whereas a GPU is designed to a lots of simple operations in parallel.
+
+So the GPU is very useful for computing real-time graphics (their original target application). It's also useful for other highly parallelizeable computation tasks such as physics simulations, audio processing, and bitcoin mining (see [GPGPU](http://en.wikipedia.org/wiki/GPGPU)).
+
+For this class, we'll be using the GPU to do 2D image processing, where each pixel is computed independently. You can think of this as *each pixel is its own computer, whose sole purpose is to figure out what color to be*.
 
 ## Core Image Filter
 
-Like the `Mathematical Expression` patch, but works at the level of pixels in **Image**s.
+The `Core Image Filter` patch is like the `Mathematical Expression` patch, but works at the level of *pixels* in **Image**s.
 
-The Core Image programming language is a subset of [GLSL](http://en.wikipedia.org/wiki/GLSL). It is an Apple-only technology. It is optimized so that a chain of Core Image filters will all get put into a pipeline automatically.
+The [Core Image](http://en.wikipedia.org/wiki/Core_Image) programming language is a subset of [GLSL](http://en.wikipedia.org/wiki/GLSL). It is an Apple-only technology. It is optimized so that a chain of Core Image filters will all get put into a pipeline automatically, so you can chain Core Image filters without a significant increase in processing time.
 
 ### Kernels
 
-The *kernel* is executed for *every pixel in the output image*, independently, in parallel. The kernel can access any input parameter, including input images (which it can sample colors from).
+The *kernel* is a function that is executed independently for *every pixel in the output image*. So for a 640x480 image, the kernel is run 307,200 times all in parallel on the GPU.
 
-Get the kernel's current pixel position using the `destCoord()` function.
+The kernel returns a color (a red, green, blue, and alpha value).
+
+The kernel can access any input parameter, including input images (which it can sample colors from). The kernel can also access its current pixel position using the `destCoord()` function.
+
+Note that `destCoord()` is the only thing that varies with respect to each independent execution of the kernel. So you can think of `destCoord()` like `Iterator Variables` in an `Iterator`! (There are a few other functions that vary but they are just conveniences, the same way Current Index and Current Position are just conveniences for each other.)
 
 ### Data types
 
-* **float**. A number.
+* **float**
+    * A number.
     * Number literals need decimal points to be interpreted as floats. That is, `3` is an integer but `3.0` is a float. Use `3.0`. (You can also use `3.`).
 
 * **vec2**, **vec3**, **vec 4**
     * A *vector*, or list, of 2, 3 or 4 **float**s.
     * Use a **vec2** to represent a position in 2D space.
-    * Use a **vec4** to represent a color (red, green, blue, alpha). **_color** (as a type for the kernel inputs) is a **vec4**
-    * You can access the *components* (members) of the vector using the accessors `.x`, `.y`, `.z`, `.w` or `.r`, `.g`, `.b`, `.a` (these are synonyms). For example, if I have a **vec2** called `position`, I can access its first component as `position.x` and its second component as `position.y`. Alternatively I could access its first component as `position.r` and its second component as `position.g`.
+    * Use a **vec4** to represent a color (red, green, blue, alpha). **_color** (as a type for the kernel input) is a **vec4**
+    * You can access the *components* (members) of the vector using the accessors `.x`, `.y`, `.z`, `.w` or `.r`, `.g`, `.b`, `.a` (these are synonyms).
+        
+        For example, if I have a **vec2** called `position`, I can access its first component as `position.x` and its second component as `position.y`. Alternatively I could access its first component as `position.r` and its second component as `position.g`.
     * Creating vectors, examples:
     
             vec2 position = vec2(320.0, 240.0) // creates a vec2 with .x set to 320, .y set to 240
             vec4 color = vec4(1.0, 0.0, 0.0, 1.0) // represents the color red
     
-    * Operations on vectors, examples:
+    * Operations on vectors are performed *component-wise*. Examples:
     
             vec2 a = vec2(1.0, 3.0);
             vec2 b = vec2(2.0, 4.0);
@@ -42,7 +55,7 @@ Get the kernel's current pixel position using the `destCoord()` function.
             a + c; // will make vec2(3.0, 5.0)
             a * c; // will make vec2(2.0, 6.0)
 
-* sampler
+* **sampler**
     * An image.
     * You can get the color (a **vec4**) at a specific pixel position (a **vec2**) using the sample function. Example:
     
@@ -52,10 +65,11 @@ Get the kernel's current pixel position using the `destCoord()` function.
 
 ### Loops and Conditionals
 
-Core Image has an interesting restriction. `for` loops and `if then else` conditionals must be able to be determined at compile time. This means that `if then else` conditionals are basically useless and `for` loops must only run a constant number of times.
+Core Image has an interesting restriction. `for` loops and `if then else` conditionals must be pre-determined at compile time. This means that `if then else` conditionals are basically useless and `for` loops must only run a constant number of times.
 
 This restriction allows the compiler to know precisely how long a kernel will take to execute which allows it to optimize more effectively.
 
 To create a conditional, use the *ternary operator*:
 
-    x > 3.0 ? x * 2.0 : 0.0 // returns twice x if x is greater than 3, otherwise returns 0.
+    // returns twice x if x is greater than 3, otherwise returns 0.
+    x > 3.0 ? x * 2.0 : 0.0;
