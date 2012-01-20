@@ -98,4 +98,5 @@ The output **Image** will be as large as the largest input **Image** (i.e. the l
 * Implement [Conway's Game of Life](http://en.wikipedia.org/wiki/Conway's_Game_of_Life) using a `Core Image Filter` and an `Accumulator`.
 * Make a filter that takes an image and distorts a geometric pattern, [op art](http://en.wikipedia.org/wiki/Op_art) style.
 * Generate a [Mandelbrot fractal](http://en.wikipedia.org/wiki/Mandelbrot_set).
+* Generate [quasicrystals](http://mainisusuallyafunction.blogspot.com/2011/10/quasicrystals-as-sums-of-waves-in-plane.html) ([solution](https://github.com/electronicwhisper/quasicrystal)).
 * Make a [Droste Effect](http://en.wikipedia.org/wiki/Droste_effect) filter. Now make it [spiral around](http://www.webdesignerdepot.com/2009/09/50-stunning-examples-of-the-droste-effect/).
