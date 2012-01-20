@@ -88,3 +88,14 @@ To create a conditional, use the *ternary operator*:
     x > 3.0 ? x * 2.0 : 0.0;
 
 Often you can cleverly use math functions (like `min`, `max`, and `abs`) to get around needing ternary operators.
+
+### Output Image
+
+The output **Image** will be as large as the largest input **Image** (i.e. the largest **sampler**). If your kernel has no **sampler** input parameters (i.e. it is a *generator*), then your output **Image** will have infinite extent and you'll need to crop it with `Image Crop`.
+
+### Challenges (for the mathematically inclined)
+
+* Implement [Conway's Game of Life](http://en.wikipedia.org/wiki/Conway's_Game_of_Life) using a `Core Image Filter` and an `Accumulator`.
+* Make a filter that takes an image and distorts a geometric pattern, [op art](http://en.wikipedia.org/wiki/Op_art) style.
+* Generate a [Mandelbrot fractal](http://en.wikipedia.org/wiki/Mandelbrot_set).
+* Make a [Droste Effect](http://en.wikipedia.org/wiki/Droste_effect) filter. Now make it [spiral around](http://www.webdesignerdepot.com/2009/09/50-stunning-examples-of-the-droste-effect/).
